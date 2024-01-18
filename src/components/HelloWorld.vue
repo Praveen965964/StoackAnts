@@ -997,7 +997,7 @@ this.BuySellSelectCheck = v.Label == 'OPTION' && v.direction == 'BUY' ? false : 
               axiosthis.NewarrayOptioArrary[z].data[0]['reco_status'] = 'TARGET NOT ACHIEVED'
             }
             axiosthis.NewarrayOptioArrary[z].data[0]['reco'] = axiosthis.NewarrayOptioArrary[z].data[0].direction
-if (new Date(this.NewDateCusatamaizeForamet) < new Date(axiosthis.NewarrayOptioArrary[z].data[0].ExpiryDateCustam)) {
+if (new Date(this.NewDateCusatamaizeForamet) <= new Date(axiosthis.NewarrayOptioArrary[z].data[0].ExpiryDateCustam)) {
   axiosthis.getEquityData.push(axiosthis.NewarrayOptioArrary[z].data[0])
 }
           }
