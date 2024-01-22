@@ -979,6 +979,7 @@ if (!axiosthis.getEquityData.includes(axiosthis.NewarrayOptioArrary[z].data[0]))
 
     ChipFunCustam(n) {
       this.DynamicNstore = n ? n : this.DynamicNstore
+      
   
       // if (this.loaderis1) {
         
