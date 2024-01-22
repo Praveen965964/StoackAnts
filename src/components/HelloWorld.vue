@@ -30,7 +30,7 @@
               <v-col align="end" class="pb-2">
                 <v-btn @click="BuyPopUpScreenNew = false" class="pa-0 black--text mb-2" width="fit-content" icon
                   height="fit-content">
-                  <v-icon :ripple="false" color="black" size="18">mdi-close</v-icon>
+                  <v-icon  color="black" size="18">mdi-close</v-icon>
                 </v-btn>
               </v-col>
             </v-row>
@@ -62,40 +62,11 @@
                 <div class="float-right" v-else>
                   <v-btn @click="BuyPopUpScreenNew = false" class="pa-0 black--text mb-2" width="fit-content" icon
                     height="fit-content">
-                    <v-icon :ripple="false" color="black" size="18">mdi-close</v-icon>
+                    <v-icon  color="black" size="18">mdi-close</v-icon>
                   </v-btn>
                 </div>
               </v-col>
             </v-row>
-
-            <!-- <div class="d-flex">
-            <div>
-          <p class="mb-0 fs-16px  Ls-0-64px text-blackColor fw-600" v-if="DataTableObjectGetItem.Label == 'OPTION' ||  DataTableObjectGetItem.Label == 'EQUITY'">{{DataTableObjectGetItem.stock.name}}</p>
-          <p class="mb-0 fs-14px  Ls-0-64px text-blackColor fw-600" v-if="DataTableObjectGetItem.Label == 'OPTION' ||  DataTableObjectGetItem.Label == 'EQUITY'">{{DataTableObjectGetItem.ltp_get.exch}} : ₹ {{DataTableObjectGetItem.ltp_get.lp}}</p>
-              </div>
-              <div class="ml-auto" v-if="DataTableObjectGetItem.Label == 'OPTION'">
-                        <v-btn class="pa-0 elevation-0 ml-1 white--text mt-n2" dense small
-                          style="height: 20px; min-width: 20px; border-radius: 4px" color="#43A833">
-                          <span     :class="BuySellSelectCheck == true ? 'font-weight-thin ' : 'font-weight-bold' ">B</span></v-btn>
-  
-                        <label class="switch1 ml-2 ">
-                          <input type="checkbox"  v-model="BuySellSelectCheck" />
-                          <span class="sliderr1 round"></span>
-                        </label>
-  
-                        <v-btn class="pa-0 elevation-0 ml-2 white--text mt-n2" dense small
-                          style="height: 20px; min-width: 20px; border-radius: 4px" color="#FF1717">
-                          <span  :class="BuySellSelectCheck == false ? 'font-weight-thin' : 'font-weight-bold' ">S</span></v-btn>
-               </div>
-               <div class="ml-auto" v-else>
-                <v-btn @click="BuyPopUpScreenNew = false" class="pa-0 black--text mb-2"  width="fit-content"
-              icon height="fit-content">
-              <v-icon :ripple="false"  color="black" size="18" 
-            >mdi-close</v-icon>
-            </v-btn>
-               </div>
-          
-          </div> -->
           </v-card>
           <v-card-text class="pa-0 pt-1 pb-3" style="height:fit-content;">
             <v-radio-group class="pa-0 pl-5 mt-3" v-model="RadioGroupmodel" color="black" dense row>
@@ -168,7 +139,6 @@
                 </v-col>
               </v-row>
               <v-row v-if="RadioGroupmodel == 'BO'">
-
                 <v-col cols="6" class="">
                   <p class="mb-3 fs-14px font-weight-regular Lh-16">Stoploss price</p>
                   <v-text-field v-model="StopLossCustamize" :rules="StopLossCustamizeRules" step="1" hide-spin-buttons
@@ -201,12 +171,8 @@
                   d="M578 1.5C578.276 1.5 578.5 1.27614 578.5 1C578.5 0.723858 578.276 0.5 578 0.5V1.5ZM0 1.5H1.50521V0.5H0L0 1.5ZM4.51562 1.5H7.52604V0.5H4.51562V1.5ZM10.5365 1.5H13.5469V0.5H10.5365V1.5ZM16.5573 1.5H19.5677V0.5H16.5573V1.5ZM22.5781 1.5H25.5885V0.5H22.5781V1.5ZM28.599 1.5H31.6094V0.5H28.599V1.5ZM34.6198 1.5H37.6302V0.5H34.6198V1.5ZM40.6406 1.5H43.651V0.5H40.6406V1.5ZM46.6615 1.5H49.6719V0.5H46.6615V1.5ZM52.6823 1.5H55.6927V0.5H52.6823V1.5ZM58.7031 1.5H61.7136V0.5H58.7031V1.5ZM64.724 1.5H67.7344V0.5H64.724V1.5ZM70.7448 1.5H73.7552V0.5H70.7448V1.5ZM76.7656 1.5H79.776V0.5H76.7656V1.5ZM82.7865 1.5H85.7969V0.5H82.7865V1.5ZM88.8073 1.5H91.8177V0.5H88.8073V1.5ZM94.8281 1.5H97.8385V0.5H94.8281V1.5ZM100.849 1.5H103.859V0.5H100.849V1.5ZM106.87 1.5H109.88V0.5H106.87V1.5ZM112.891 1.5H115.901V0.5H112.891V1.5ZM118.911 1.5H121.922V0.5H118.911V1.5ZM124.932 1.5H127.943V0.5H124.932V1.5ZM130.953 1.5H133.964V0.5H130.953V1.5ZM136.974 1.5H139.984V0.5H136.974V1.5ZM142.995 1.5H146.005V0.5H142.995V1.5ZM149.016 1.5H152.026V0.5H149.016V1.5ZM155.036 1.5H158.047V0.5H155.036V1.5ZM161.057 1.5H164.068V0.5H161.057V1.5ZM167.078 1.5H170.089V0.5H167.078V1.5ZM173.099 1.5H176.109V0.5L173.099 0.5V1.5ZM179.12 1.5H182.13V0.5H179.12V1.5ZM185.141 1.5H188.151V0.5H185.141V1.5ZM191.162 1.5H194.172V0.5H191.162V1.5ZM197.182 1.5H200.193V0.5H197.182V1.5ZM203.203 1.5H206.214V0.5H203.203V1.5ZM209.224 1.5H212.234V0.5H209.224V1.5ZM215.245 1.5H218.255V0.5H215.245V1.5ZM221.266 1.5H224.276V0.5H221.266V1.5ZM227.287 1.5H230.297V0.5H227.287V1.5ZM233.307 1.5H236.318V0.5H233.307V1.5ZM239.328 1.5H242.339V0.5H239.328V1.5ZM245.349 1.5H248.36V0.5H245.349V1.5ZM251.37 1.5H254.38V0.5H251.37V1.5ZM257.391 1.5H260.401V0.5H257.391V1.5ZM263.412 1.5H266.422V0.5H263.412V1.5ZM269.432 1.5H272.443V0.5H269.432V1.5ZM275.453 1.5H278.464V0.5H275.453V1.5ZM281.474 1.5H284.484V0.5H281.474V1.5ZM287.495 1.5H290.505V0.5L287.495 0.5V1.5ZM293.516 1.5H296.526V0.5H293.516V1.5ZM299.536 1.5H302.547V0.5H299.536V1.5ZM305.557 1.5H308.568V0.5H305.557V1.5ZM311.578 1.5H314.589V0.5H311.578V1.5ZM317.599 1.5H320.609V0.5H317.599V1.5ZM323.62 1.5H326.63V0.5H323.62V1.5ZM329.641 1.5H332.651V0.5H329.641V1.5ZM335.661 1.5H338.672V0.5H335.661V1.5ZM341.682 1.5H344.693V0.5H341.682V1.5ZM347.703 1.5H350.713V0.5H347.703V1.5ZM353.724 1.5H356.734V0.5H353.724V1.5ZM359.745 1.5H362.755V0.5H359.745V1.5ZM365.765 1.5H368.776V0.5H365.765V1.5ZM371.786 1.5H374.797V0.5H371.786V1.5ZM377.807 1.5H380.817V0.5H377.807V1.5ZM383.828 1.5H386.838V0.5H383.828V1.5ZM389.849 1.5H392.859V0.5H389.849V1.5ZM395.869 1.5H398.88V0.5H395.869V1.5ZM401.89 1.5H404.901V0.5H401.89V1.5ZM407.911 1.5H410.922V0.5H407.911V1.5ZM413.932 1.5H416.942V0.5H413.932V1.5ZM419.953 1.5H422.963V0.5H419.953V1.5ZM425.974 1.5H428.984V0.5H425.974V1.5ZM431.994 1.5H435.005V0.5H431.994V1.5ZM438.015 1.5H441.026V0.5H438.015V1.5ZM444.036 1.5H447.046V0.5H444.036V1.5ZM450.057 1.5H453.067V0.5H450.057V1.5ZM456.078 1.5H459.088V0.5H456.078V1.5ZM462.098 1.5H465.109V0.5H462.098V1.5ZM468.119 1.5H471.13V0.5H468.119V1.5ZM474.14 1.5H477.15V0.5H474.14V1.5ZM480.161 1.5H483.171V0.5H480.161V1.5ZM486.182 1.5H489.192V0.5H486.182V1.5ZM492.202 1.5H495.213V0.5H492.202V1.5ZM498.223 1.5H501.234V0.5H498.223V1.5ZM504.244 1.5H507.255V0.5H504.244V1.5ZM510.265 1.5H513.275V0.5H510.265V1.5ZM516.286 1.5H519.296V0.5H516.286V1.5ZM522.307 1.5H525.317V0.5H522.307V1.5ZM528.328 1.5H531.338V0.5H528.328V1.5ZM534.348 1.5H537.359V0.5H534.348V1.5ZM540.369 1.5H543.38V0.5H540.369V1.5ZM546.39 1.5H549.401V0.5H546.39V1.5ZM552.411 1.5H555.421V0.5H552.411V1.5ZM558.432 1.5H561.442V0.5H558.432V1.5ZM564.453 1.5H567.463V0.5H564.453V1.5ZM570.474 1.5H573.484V0.5H570.474V1.5ZM576.495 1.5L578 1.5V0.5H576.495V1.5Z"
                   fill="#D9DBDC" />
               </svg>
-              <p v-if="DataTableObjectGetItem.Label == 'EQUITY'"
-                class="mb-0 pt-1 text-Greycolor fs-14px Lh-14px font-weight-regular ">Note: Sorry! We don't allow sell
-                transactions </p>
-
+              <p v-if="DataTableObjectGetItem.Label == 'EQUITY'" class="mb-0 pt-1 text-Greycolor fs-14px Lh-14px font-weight-regular ">Note: Sorry! We don't allow sell transactions </p>
             </div>
-
           </v-card-text>
           <v-card-actions>
             <div class="ml-auto float-right text-end py-2 pr-4">
@@ -231,12 +197,11 @@
       <span class="white--text fs-14px Lh-16 font-weight-regular">Logout</span>
     </v-tooltip>  
     </v-app-bar>
-      <v-card class="brd-1 elevation-0 mt-3 d-none d-md-block" outlined height="">
+      <v-card class="brd-1 elevation-0 mt-3 d-none d-md-block" outlined height="" >
         <div class="pl-4 pr-3 py-4">
           <v-row>
             <v-col cols="7">
-              <v-chip-group column v-model="MobBondChips" class="chipDeaultSizeCus  " mandatory
-                active-class=" ChipActiveCuastom">
+              <v-chip-group column v-model="MobBondChips" class="chipDeaultSizeCus  " mandatory active-class=" ChipActiveCuastom">
                 <v-chip class=" text-center text-capitalize" @click="ChipFunCustam(tag)"
                   v-for="(tag ,i) in RecoStatusKeyPushArrary" :key="i" outlined>
                   {{ tag.toLowerCase() }}
@@ -245,12 +210,8 @@
             </v-col>
             <v-col cols="5" class="pr-0 pl-0 ">
               <div class="d-flex pt-2 ParrentClassTextFiled">
-        
                 <v-select @change="ChipFunCustam()" v-model="SelectDataCustamModel" class="elevation-0 fs-14px mr-3 green--text" fade  background-color="#F1F3F8" 
-          :items="SelectEquityOption"  rounded hide-details
-          flat
-          dense
-          solo append-icon="mdi-chevron-down" style="max-width:22%"
+          :items="SelectEquityOption"  rounded hide-details flat dense solo append-icon="mdi-chevron-down" style="max-width:22%"
         ></v-select>
                 <v-text-field class="pl-0 mr-3  d-none d-md-block" v-model="TableSearch" hide-details height="36px"
                   background-color="#F1F3F8" solo rounded flat dense style="max-width:176px">
@@ -281,31 +242,31 @@
             </v-col>
           </v-row>
         </div>
-        <v-data-table fixed-header dense disable-pagination height="485" :search="TableSearch" :loading="loaderis1"
+        <v-data-table fixed-header dense disable-pagination height="440" :search="TableSearch" :loading="loaderis1"
           :headers="HeadersItemsNew" :items="checkitem" hide-default-footer>
           <template v-slot:item="{ item }">
             <tr class="" @mouseover="selectItem(item)" @mouseleave="unSelectItem(item)">
               <td class="pt-5 pb-2 pr-0">
                 <v-list class="pa-0" style="background-color:transparent;width:fit-content">
                   <v-list-item class="mb-auto pr-0 pl-0">
-                    <v-list-item-avatar class="mb-auto ma-0" v-if="item.Label == 'EQUITY'"
-                      :color="item.user.profile_pic == 'https://prod-api-connect.stockants.comNone' ? '#999' : ''">
-                      <p class="mb-0" v-if="item.user.profile_pic == 'https://prod-api-connect.stockants.comNone'">
+                    <v-list-item-avatar class="mb-auto ma-0" 
+                      :color="item.user.profile_pic == 'https://prod-api-connect.stockants.comNone' || item.user.full_name == 'Vineet Chawla' ? '#999' : ''">
+                      <p class="mb-0" v-if="item.user.profile_pic == 'https://prod-api-connect.stockants.comNone' || item.user.full_name == 'Vineet Chawla' ">
                         {{ item.user.full_name.slice(0, 1) }} </p>
-                      <img v-else class="" :src="item.user.profile_pic.replace(/-connect/g, '')" />
+                      <img v-else class="" :src="item.user.profile_pic.replace(/-connect/g, '')"  />
                     </v-list-item-avatar>
-                    <v-list-item-avatar class="mb-auto ma-0" v-if="item.Label == 'OPTION'"
+                    <!-- <v-list-item-avatar class="mb-auto ma-0" v-if="item.Label == 'OPTION'"
                       :color="item.strategy.user_details.profile_pic == 'https://prod-api-connect.stockants.comNone' ? '#999' : ''">
                       <p class="mb-0"
                         v-if="item.strategy.user_details.profile_pic == 'https://prod-api-connect.stockants.comNone'">
                         {{ item.strategy.user_details.full_name.slice(0, 1) }} </p>
                       <img v-else class="" :src="item.strategy.user_details.profile_pic.replace(/-connect/g, '')" />
-                    </v-list-item-avatar>
+                    </v-list-item-avatar> -->
                     <v-list-item-content class="pt-0 pb-0 pl-2 mb-auto">
                       <v-list-item-title>
                         <div class="d-flex">
                           <p class="mb-0 fs-14px mb-auto fw-600 text-blackColor Lh-16">
-                            {{ item.Label == 'EQUITY' ? item.user.full_name : item.strategy.user_details.full_name }} </p>
+                            {{ item.user.full_name}} </p>
                           <img src="@/assets/TwitterTick.svg" class=" ml-1" width="15px" height="15px" />
                         </div>
                       </v-list-item-title>
@@ -386,7 +347,7 @@
                   :style="{ 'color': item.reco_status == 'LIVE' ? '#43A833' : 'black', }">{{ item.reco_status.toLowerCase() }}</p>
               </td>
               <td class="mb-auto pb-2 pr-2">
-                <v-btn :disabled="!(item.reco_status == 'LIVE')" @click="BuyPopUpScreenNew = true, OrderPlaceFunCtion(item)" x-small class=" elevation-0"
+                <v-btn :disabled="!(item.reco_status == 'LIVE' || item.reco_status == 'YET TO LIVE')" @click="BuyPopUpScreenNew = true, OrderPlaceFunCtion(item)" x-small class=" elevation-0"
                   width="50px" style="background-color:#43A833">
                   <p class="mb-0 fs-13 font-weight-medium  Lh-16 white--text text-center">{{ item.Label == 'EQUITY' ? "BUY" : "TRADE" }}</p>
                 </v-btn>
@@ -398,7 +359,7 @@
       </v-card>
     </v-container>
 
-    <div class="d-block d-md-none">
+    <div class="d-block d-md-none" v-if="DtataTableTrueCheck">
       <div class="px-4">
         <v-row class="pb-1">
           <v-col cols="12" class="pt-0 pr-0 " align="end">
@@ -448,8 +409,8 @@
               <v-list class="pa-0 pt-6" style="background-color:transparent">
                 <v-list-item class="mb-auto pr-0 pl-0">
                   <v-list-item-avatar class="mb-auto ma-0"
-                    :color="r.user.profile_pic == 'https://prod-api-connect.stockants.comNone' ? '#999' : ''">
-                    <p class="mb-0" v-if="r.user.profile_pic == 'https://prod-api-connect.stockants.comNone'">
+                    :color="r.user.profile_pic == 'https://prod-api-connect.stockants.comNone' || r.user.full_name == 'Vineet Chawla' ? '#999' : ''">
+                    <p class="mb-0" v-if="r.user.profile_pic == 'https://prod-api-connect.stockants.comNone' || r.user.full_name == 'Vineet Chawla'">
                       {{ r.user.full_name.slice(0, 1) }} </p>
                     <img v-else class="" :src="r.user.profile_pic.replace(/-connect/g, '')" />
                   </v-list-item-avatar>
@@ -459,15 +420,19 @@
                         <p class="mb-0 fs-14px mb-auto fw-600 text-blackColor Lh-16 text-uppercase">{{ r.user.full_name }}
                         </p>
                         <img src="@/assets/TwitterTick.svg" class=" ml-1" width="15px" height="15px" />
-                        <p class="font-weight-medium fs-12px pt-0 mb-0 pl-2 Lh-16 text-blackColor">{{ r.user.profession }}
-                          <span class="pl-1 text-Greycolor fw-600">{{ r.recoDtaeNew }}</span>
-                        </p>
+                        <p class="font-weight-medium fs-12px pt-0 mb-0 pl-2 Lh-16 text-blackColor" v-if="r.Label == 'EQUITY'">{{ r.user.profession }}
+                         
+                        </p> <span class="pl-1 text-Greycolor fs-12px fw-600 ">{{ r.recoDtaeNew }}</span>
                       </div>
                     </v-list-item-title>
                     <v-list-item-subtitle>
+                      <p class="font-weight-medium fs-12px pt-0 mb-0 Lh-16 text-blackColor" v-if="r.Label == 'OPTION'">{{ r.user.profession }} </p>
+
                       <p v-if="r.user.total_reco" class="mb-0 font-weight-medium text-Greycolor  fs-14px Lh-16">Total
                         Recommendation
                         -{{ r.user.total_reco }} </p>
+                        <p ></p>
+
                     </v-list-item-subtitle>
                   </v-list-item-content>
                 </v-list-item>
@@ -535,7 +500,7 @@
                   </v-card>
 
                   <v-card class="elevation-0 text-end" width="23%">
-                    <v-btn :disabled="!(r.reco_status == 'LIVE')" small class="ml-auto elevation-0" @click="BuyPopUpScreenNew = true, OrderPlaceFunCtion(r)"
+                    <v-btn :disabled="!(r.reco_status == 'LIVE' || r.reco_status == 'YET TO LIVE')" small class="ml-auto elevation-0" @click="BuyPopUpScreenNew = true, OrderPlaceFunCtion(r)"
                       style="background-color :#43A833">
                       <p class="mb-0 fs-13 font-weight-regular white--text Lh-16 ">{{ r.Label == 'EQUITY' ? "BUY" :
                         "TRADE" }}</p>
@@ -548,7 +513,7 @@
           </div>
           <div class="text-center btnRippleFalse " :class="MobSearchFilterItem == '' ? 'd-none' : ''"
             v-if="MobSearchFilterItem.length > 5">
-            <v-btn class="text-none my-2" ripple="false" text @click="MobSeeMoreStocks = !MobSeeMoreStocks">
+            <v-btn class="text-none my-2"  text @click="MobSeeMoreStocks = !MobSeeMoreStocks">
               <p class="mb-0 fs-14px text-BLUEcolor fw-600" v-if="MobSeeMoreStocks">See more Stocks <v-icon
                   color="#0037B7"> mdi-chevron-down</v-icon> </p>
               <p class="mb-0 fs-14px text-BLUEcolor fw-600" v-else>See Less Stocks <v-icon color="#0037B7">
@@ -577,8 +542,7 @@ import axios from "axios";
 export default {
   data() {
     return {
-      TESTINGSNACKBAR:true,
-      NewDateCusatamaizeForamet:'',
+      DtataTableTrueCheck:true,
       active: 0,
       BuySellSelectCheck: false,
       PriceModelCustamize: null,
@@ -654,6 +618,7 @@ export default {
       ModelCusNameQuantity: null,
       errorMessageGet: '',
       SelectDataCustamModel:"All",
+      MobileCheckCheckItems:[]
     }
   },
   computed: {
@@ -664,7 +629,8 @@ export default {
       return this.checkitem.filter(post => {
         return post.stock.name.toLowerCase().includes(this.MobViewTextfileSearchStocks.toLowerCase())
       })
-    }
+      
+    },
   },
   watch: {
     date() {
@@ -956,9 +922,6 @@ this.BuySellSelectCheck = v.Label == 'OPTION' && v.direction == 'BUY' ? false : 
           var responseOption = response.data.data
           axiosthis.NewarrayOptioArrary = responseOption
           axiosthis.getEquityData = []
-          
-          var dateFormatecheck =    new Date()
-      this.NewDateCusatamaizeForamet =dateFormatecheck.toLocaleDateString()
           for (let z = 0; z < axiosthis.NewarrayOptioArrary.length; z++) {
             var tokenExchget = ({ token: axiosthis.NewarrayOptioArrary[z].data[0].stock.token, exch: "NFO" })
             axiosthis.tokenExchGetStore.push(tokenExchget)
@@ -996,10 +959,13 @@ this.BuySellSelectCheck = v.Label == 'OPTION' && v.direction == 'BUY' ? false : 
             else if (axiosthis.NewarrayOptioArrary[z].data[0].status == "TARGET_NOT_ACHIEVED") {
               axiosthis.NewarrayOptioArrary[z].data[0]['reco_status'] = 'TARGET NOT ACHIEVED'
             }
+            else if (axiosthis.NewarrayOptioArrary[z].data[0].status == "YET_TO_LIVE") {
+              axiosthis.NewarrayOptioArrary[z].data[0]['reco_status'] = 'YET TO LIVE'
+            }
             axiosthis.NewarrayOptioArrary[z].data[0]['reco'] = axiosthis.NewarrayOptioArrary[z].data[0].direction
-if (new Date(this.NewDateCusatamaizeForamet) <= new Date(axiosthis.NewarrayOptioArrary[z].data[0].ExpiryDateCustam)) {
+if (!axiosthis.getEquityData.includes(axiosthis.NewarrayOptioArrary[z].data[0])) {
   axiosthis.getEquityData.push(axiosthis.NewarrayOptioArrary[z].data[0])
-}
+                }
           }
         })
         .catch((error) => {
@@ -1013,23 +979,68 @@ if (new Date(this.NewDateCusatamaizeForamet) <= new Date(axiosthis.NewarrayOptio
 
     ChipFunCustam(n) {
       this.DynamicNstore = n ? n : this.DynamicNstore
-      this.getEquityData.sort(function (a, b) {
+  
+      // if (this.loaderis1) {
+        
+      // }
+      // this.DataItemStocks = true
+    //   if ( this.DtataTableTrueCheck) {
+    //     for (var i = 1; i < this.getEquityData.length; i++) {
+    // for (var j = 0; j < i; j++) {
+    //     if (this.getEquityData[j].getTime   < this.getEquityData[i].getTime) {
+    //         var x = this.getEquityData[i];
+    //         this.getEquityData[i] = this.getEquityData[j];
+    //         this.getEquityData[j] = x;
+    //     }
+    //   }
+    //   console.log("kkkkkkkkkkkkkkkk", this.getEquityData);
+    // }
+
+    //   }
+      // }
+
+      // if (this.DataItemStocks) {
+        this.getEquityData.sort(function (a, b) {
         return new Date(b.DateOnlyGet + " " + b.getTime) - new Date(a.DateOnlyGet + " " + a.getTime);
       });
+      // } 
+      //   this.getEquityData.sort(function (a, b) {
+      //   return new Date(b.DateOnlyGet + " " + b.getTime) - new Date(a.DateOnlyGet + " " + a.getTime);
+      // });
+      
+      
+
+    //   if (this.DataItemStocks) {
+    //      for (var i = 1; i < this.getEquityData.length; i++)
+    // for (var j = 0; j < i; j++)
+    //     if (this.getEquityData[j].getTime   < this.getEquityData[i].getTime) {
+    //         var x = this.getEquityData[i];
+    //         this.getEquityData[i] = this.getEquityData[j];
+    //         this.getEquityData[j] = x;
+    //     }
+    //   }
+    //   for (var i = 1; i < this.getEquityData.length; i++)
+    // for (var j = 0; j < i; j++)
+    //     if (this.getEquityData[j].getTime   < this.getEquityData[i].getTime) {
+    //         var x = this.getEquityData[i];
+    //         this.getEquityData[i] = this.getEquityData[j];
+    //         this.getEquityData[j] = x;
+    //     }
+
       let text = new Date(this.date)
       this.rplacetext = text.toLocaleDateString();
       if (this.DynamicNstore === 'ALL' && this.SelectDataCustamModel === 'All' || this.DynamicNstore === 'ALL' && this.SelectDataCustamModel === 'Equity' ||  this.DynamicNstore === 'ALL' && this.SelectDataCustamModel === 'Option'  ) {
         this.checkitem = this.getEquityData.filter((x) => {
-          return  this.SelectDataCustamModel === 'All' && this.DynamicNstore === 'ALL' ? x.DateOnlyGet == this.rplacetext : this.SelectDataCustamModel === 'Equity' 
+          return  this.SelectDataCustamModel === 'All' && this.DynamicNstore === 'ALL' ? x.DateOnlyGet == this.rplacetext && (x.ltp_get.lp !== "0.00" && x.ltp_get.lp !== "0")  : this.SelectDataCustamModel === 'Equity' 
           && this.DynamicNstore === 'ALL' ? x.DateOnlyGet == this.rplacetext && x.Label == 'EQUITY' :
-          this.SelectDataCustamModel === 'Option' && this.DynamicNstore === 'ALL' ? x.DateOnlyGet == this.rplacetext && x.Label == 'OPTION' : '' 
+          this.SelectDataCustamModel === 'Option' && this.DynamicNstore === 'ALL' ? x.DateOnlyGet == this.rplacetext && x.Label == 'OPTION' && (x.ltp_get.lp !== "0.00" && x.ltp_get.lp !== "0") : '' 
         });
-      }
+    }
       else {
         this.checkitem = this.getEquityData.filter((x) => { 
           return this.SelectDataCustamModel === 'Equity' && this.DynamicNstore ? x.reco_status == this.DynamicNstore && x.DateOnlyGet == this.rplacetext && x.Label == 'EQUITY' : 
-          this.SelectDataCustamModel === 'Option' && this.DynamicNstore ? x.reco_status == this.DynamicNstore && x.DateOnlyGet == this.rplacetext && x.Label == 'OPTION' : 
-          this.SelectDataCustamModel === 'All' && this.DynamicNstore ? x.reco_status == this.DynamicNstore && x.DateOnlyGet == this.rplacetext : ''
+          this.SelectDataCustamModel === 'Option' && this.DynamicNstore ? x.reco_status == this.DynamicNstore && x.DateOnlyGet == this.rplacetext && x.Label == 'OPTION' && (x.ltp_get.lp !== "0.00" && x.ltp_get.lp !== "0")  : 
+          this.SelectDataCustamModel === 'All' && this.DynamicNstore ? x.reco_status == this.DynamicNstore && x.DateOnlyGet == this.rplacetext && (x.ltp_get.lp !== "0.00" && x.ltp_get.lp !== "0") : ''
         });
       }
     },
@@ -1151,6 +1162,9 @@ body,
 </style>
 
 <style lang="scss">
+.HeightCustamaize {
+  height: calc(87vh - 30px) !important;
+}
 @media (max-width: 1264px) {
   .CustamwidthStockName {
     width: fit-content !important;
@@ -1450,4 +1464,67 @@ input:checked+.sliderr1:before {
 .input-group .input-group__input {
   font-size: 1px !important;
   width: 10px;
-}</style>
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
